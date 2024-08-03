@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Helvetica:wght@400;700&display=swap');
+
+
+
+.container {
+  @apply grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4;
+  overflow: hidden;
+}
+
+.card {
+  @apply relative rounded-lg overflow-hidden shadow-lg h-48 w-full;
+  transition: filter 0.3s ease, box-shadow 0.3s ease; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  
+}
+ 
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+.bgImage {
+  @apply absolute inset-0 bg-cover bg-center;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+   
+}
+
+.overlay {
+  @apply absolute inset-0 bg-black bg-opacity-15; 
+}
+
+.content {
+  @apply relative z-10 p-4 flex flex-col justify-between h-full;
+  padding-bottom: 0.5rem; 
+  font-family: 'Poppins', sans-serif;
+  overflow: hidden;
+}
+
+.label {
+  font-weight: bold;
+  color: gray;
+  margin-bottom: 0.5rem;
+  display: block;
+  font-family: 'Helvetica', sans-serif;
+}
+
+
+
+.titleStyle1 {
+  @apply text-2xl font-bold mb-2;
+  color: #f5f5dc
+}
+
+
+.titleStyle2 {
+  @apply text-white text-2xl font-bold mb-2;
+}
+
+
+.titleStyle3 {
+  @apply text-black text-2xl font-bold  mb-2;
+}
+
+
+.titleStyle4 {
+  @apply  text-2xl font-bold  mb-2;
+  color: #1C2833;
+}
+
+.descriptionStyle1 {
+  @apply text-white mb-4 text-lg font-semibold;
+  color: #d3d3d3;
+  font-family: 'Helvetica', sans-serif;
+}
+
+
+.descriptionStyle2 {
+  @apply  mb-4 text-lg font-semibold ;
+  color: #333333;
+  font-family: 'Helvetica', sans-serif;
+}
+
+
+.descriptionStyle3 {
+  @apply  mb-4 text-lg font-semibold;
+  color: #FF5722;
+  font-family: 'Helvetica', sans-serif;
+}
+
+
+.descriptionStyle4 {
+  @apply  mb-4 text-lg font-semibold ;
+  color: #5D6D7E;
+}
+
+.ctaButton1 {
+  @apply self-start mt-auto px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300;
+  background: linear-gradient(90deg,#4a90e2, #1c3f95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.ctaButton1:hover {
+  background: linear-gradient(90deg, #2966ab, #1c3f99);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.ctaButton2 {
+  @apply self-start mt-auto px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.ctaButton2:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+ 
+.ctaButton3 {
+  @apply self-start mt-auto px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300;
+  background: #d14f27; 
+  border: 2px solid #FF8A65; 
+  box-shadow: 0 0 10px #FFA726, 0 0 20px #FFA726, 0 0 40px #FFA726; 
+  margin-bottom: 2rem;
+}
+
+.ctaButton3:hover {
+  box-shadow: 0 0 20px #FFA726, 0 0 30px #FFA726, 0 0 50px #FFA726; 
+  transform: translateY(-3px);
+}
+
+
+
+.ctaButton4 {
+  @apply self-start mt-auto px-6 py-3 text-black rounded-lg font-semibold transition-all duration-300;
+  background: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.ctaButton4:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dropdownBackdrop {
+  @apply fixed inset-0 bg-black bg-opacity-80 z-40; 
+}
+
+.dropdown {
+  @apply bg-gray-100 shadow-lg rounded-lg p-6 z-50;
+  width: 80%; 
+  max-width: 600px;
+  height: auto; 
+  max-height: 90vh; 
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+}
+.dropdownTitle {
+  @apply text-lg font-bold mb-4; 
+  font-family: 'Poppins', sans-serif;
+}
+
+.input {
+  @apply block w-full mt-1 p-2 border rounded;
+  font-family: 'Poppins', sans-serif;
+}
+
+.closeButton {
+  @apply absolute top-2 right-2 text-2xl cursor-pointer;
+  background: none;
+  border: none;
+  color: #333;
+}
+
+.dropdownActions {
+  @apply flex flex-col gap-2 mt-4; 
+}
+
+.doneButton {
+  @apply px-4 py-2 text-white rounded-full bg-gray-700 hover:bg-gray-800; 
+}
+
+.downloadButton {
+  @apply px-4 py-2 bg-white text-blue-500 rounded-full border border-blue-500 hover:bg-blue-50; 
+}
+
+.imageContainer {
+  @apply relative w-full mb-7; 
+  height: 150px;
+}
+
+.dropdown .bgImage {
+  height: 150px; 
+  position: relative;
+  }
+
+
+
+.dropdown .overlay {
+  display: none;
+}
+
+.dropdown .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10; 
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown .title {
+  font-size: 1.5rem; 
+  color: '#A9A9A9';
+  padding-left: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dropdown .description {
+  margin-bottom: 1rem; 
+  padding-left: 1rem;
+  font-family: 'Helvetica', sans-serif;
+
+}
+
+
+
+.dropdown .ctaButton1 {
+  @apply self-start mt-auto px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300;
+  background: linear-gradient(90deg,#4a90e2, #1c3f95);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.dropdown .ctaButton1:hover {
+  background: linear-gradient(90deg, #2966ab, #1c3f99);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.dropdown .ctaButton2 {
+  @apply self-start mt-auto px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.dropdown .ctaButton2:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  margin-bottom: 2rem;
+}
+
+.dropdown .ctaButton3 {
+  @apply self-start mt-auto px-6 py-3 text-white rounded-lg font-semibold transition-all duration-300;
+  background: #d14f27; 
+  border: 2px solid #FF8A65; 
+  box-shadow: 0 0 10px #FFA726, 0 0 20px #FFA726, 0 0 40px #FFA726; 
+  margin-bottom: 2rem;
+}
+
+.dropdown .ctaButton3:hover {
+  box-shadow: 0 0 20px #FFA726, 0 0 30px #FFA726, 0 0 50px #FFA726; 
+  transform: translateY(-3px);
+}
+
+.dropdown .ctaButton4 {
+  @apply self-start mt-auto px-6 py-3 text-black rounded-lg font-semibold transition-all duration-300;
+  background: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  margin-left: 1rem;
+}
+
+.dropdown .ctaButton4:hover {
+  background: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.editIcon {
+  @apply absolute top-2 right-2 text-white hover:text-gray-200 cursor-pointer;
+  font-size: 2rem; 
+}
+
+
+
+
+.imageList {
+  @apply w-full overflow-hidden;
+}
+
+.slick-slider {
+  @apply w-full relative; 
+  display: flex;
+  gap: 2rem;
+}
+
+
+.slick-prev, .slick-next {
+  @apply absolute top-1/2 transform -translate-y-1/2 bg-white rounded-full text-black w-8 h-8 flex items-center justify-center cursor-pointer;
+  z-index: 50;
+}
+
+.slick-prev::before, .slick-next::before {
+  content: '';
+}
+
+.slick-prev {
+  left: -20px;
+}
+
+.slick-next {
+  right: -20px;
+}
+
+
+
+.slick-prev::after, .slick-next::after {
+  content: '←'; 
+  @apply text-xl text-black;
+}
+
+.slick-next::after {
+  content: '→'; 
+}
+.imageList img {
+  @apply w-14 h-20 rounded-full cursor-pointer border-2 border-transparent;
+  transition: border 0.2s ease-in-out;
+  border-radius: 15px;
+  margin-right: 2rem;
+}
+
+.imageList img:hover {
+  @apply border-blue-500; 
+}
+
+.imageList img.selected {
+  @apply border-blue-500;
+}
